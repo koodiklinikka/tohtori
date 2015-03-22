@@ -1,4 +1,5 @@
 # Tohtori
+![Codeship badge](https://codeship.com/projects/13708060-b217-0132-f628-42d6ec1e1524/status?branch=master)
 
 Tohtori is the helpful Koodiklinikka bot
 
