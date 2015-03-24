@@ -1,6 +1,14 @@
 #!/bin/bash
+if [[ -z "$1" ]] 
+  then
+  KEYROOT=$HOME
+else
+  KEYROOT=$1
+fi
 
-ejson --keydir=$HOME/.ejson decrypt ../config/secrets.production.ejson > ../config/secrets.json
+gem install ejson
+
+ejson --keydir=$KEYROOT/.ejson decrypt ../config/secrets.production.ejson > ../config/secrets.json
 
 docker build -t tohtori_bot ../.
 
